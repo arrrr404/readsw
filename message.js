@@ -224,7 +224,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
                   let [packname, author] = m.text.split(/[,|\-+&]/)
                   exif = { packName: packname ? packname : "", packPublish: author ? author : "" }
                } else {
-                  exif = { packName: ``, packPublish: `@ardhixs_` }
+                  exif = { packName: `Tes`, packPublish: `@ardhixs_` }
                }
 
                let sticker = await (await import("./lib/sticker.js")).writeExif({ mimetype: quoted.msg.mimetype, data: media }, exif)
