@@ -26,7 +26,7 @@ export default async function message(hisoka, store, m) {
       switch (isCommand ? m.command.toLowerCase() : false) {
          case "menu": {
             let menu = {
-               main: ["menu", "info", "delete", "quoted", "listsw", "getsw", "sc"],
+               main: ["menu", "info", "delete", "quoted", "listsw", "getsw"],
                tool: ["rvo", "exif", "tourl", "sticker"],
                owner: ["upsw", "restart", "contact", "eval", "exec"],
                group: ["link"]
