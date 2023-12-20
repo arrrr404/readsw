@@ -224,7 +224,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
                   let [packname, author] = m.text.split(/[,|\-+&]/)
                   exif = { packName: packname ? packname : "", packPublish: author ? author : "" }
                } else {
-                  exif = { packName: `Sticker Dibuat Oleh : `, packPublish: `Dika Ardianta` }
+                  exif = { packName: ``, packPublish: `@ardhixs_` }
                }
 
                let sticker = await (await import("./lib/sticker.js")).writeExif({ mimetype: quoted.msg.mimetype, data: media }, exif)
@@ -295,10 +295,6 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
             if (contacts.length === 0) throw "Kontak gaada"
             await hisoka.sendContact(m.from, contacts.map(v => v && v.id), m, { ephemeralExpiration: m.expiration })
          }
-            break
-         
-         case "sc":
-            await m.reply("https://file.ardnt.id/zvS4VG8vBg8ilFaD0vco")
             break
 
          default:
